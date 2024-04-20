@@ -10,6 +10,17 @@
   
 */
 
+:root{
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 24%, 13%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+    --Prof-pic: url(./images/image-victor.jpg);
+    --bg-card: url(./images/bg-pattern-card.svg);
+    --bg-top: url(./images/bg-pattern-top.svg);
+    --bg-bottom: url(./images/bg-pattern-bottom.svg);
+}
+
 
 
 
@@ -18,9 +29,11 @@ body{
     font-optical-sizing: auto;
     font-style: normal;
     font-variation-settings: "YOPQ" 300;
-    background-color:  hsl(185, 75%, 39%);
+    background-color:  var(--Dark-cyan);
     margin: 0;
     padding: 0;
+    font-size: 18px;
+    text-align: center;
 }
 
 
@@ -47,7 +60,122 @@ body{
 .bg-container > img:nth-child(2) {
     right: 0em;
     top: 20em;
-}
+} 
 
 /* finish set background */
+
+/* Start Card */
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    
+    
+
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 25em;
+        height: 28em;
+        background-color: white;
+        border-radius: 15px;
+        overflow: hidden;
+        z-index: 1;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        
+        .bg-section{
+            height: inherit;
+            width: 100%;
+            background-image: var(--bg-card);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .info-section{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: inherit;
+            justify-content: space-between;
+            align-items: center;
+
+        
+            .pic-section{
+                width: 120px;
+                height: 120px;
+                background-image: var(--Prof-pic);
+                background-size: 120px;
+                background-repeat: no-repeat;
+                border: 7px solid white;
+                border-radius: 100%;
+                position: absolute;
+                top: 13rem;
+            }
+
+            .text-section{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                color: var(--Very-dark-desaturated-blue);
+                
+
+                .prof-info{
+
+                    display: flex;
+                    flex-direction: column;
+
+                    h1{
+                        font-size: 25px;
+                        font-weight: 900;
+                        margin-bottom: 5px;
+
+                        small{
+                            font-weight: 400;
+                            color: var(--Dark-gray);
+                        }
+                    }
+                    h3{
+                        color: var(--Dark-gray);
+                        font-weight: 400;
+                        margin: 0 0 1em 0;
+                    }
+                }
+
+                .account-info{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    border-top: 1px solid var(--Dark-gray);
+                    padding: 0.5em;
+                
+                    div > h1{
+                        font-size: 22px;
+                        margin-bottom: 0;
+                    }
+                
+                    div > h3{
+                        font-size: 18px;
+                        color: var(--Dark-gray);
+                        font-weight: 400;
+                        margin-top: 5px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+
+
+
+
 
